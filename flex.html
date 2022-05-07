@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+max-width: 90%;
+margin: 0 auto;
+}
+
+.navWrapper{
+background:#ffc107;
+box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+ nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    height:80px;
+  }
+  
+  .logo{
+  display:flex;
+  align-items:center;
+  }
+
+.main-menu ul{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+
+
+.main-menu ul li{
+  margin-left:54px;
+  list-style-type:none;
+}
+
+.main-menu ul li > a{
+  text-decoration:none;
+  font-size: 17px;
+    font-weight: 600;
+	padding: 30px 10px;
+	color:#fff;
+}
+
+.main-menu ul li a.active, a:hover{
+  background:black;
+  transition:2s;
+}
+
+.mobile-menu{
+display:none;
+}
+
+
+.about{
+display:flex;
+justify-content:space-around;
+height:200px;
+}
+
+.div1{
+width:100%;
+background:green;
+margin:10px;
+
+}
+
+.about > .div2{
+width:100%;
+background:red;
+margin:10px;
+}
+
+.about > .div3{
+width:100%;
+background:purple;
+margin:10px;
+}
+
+.about > .div4{
+width:100%;
+background:orange;
+margin:10px;
+}
+
+
+.service {
+  display: flex;
+    flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.service > div {
+display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 200px;
+}
+
+
+
+
+
+@media screen and (max-width:900px){
+.mobile-menu{
+display:block;
+}
+.main-menu ul.show {
+    display: block;
+
+}
+
+.main-menu ul{
+display:none;
+width: 100%;
+    text-align: center;
+    list-style-type: none;
+    padding: 1rem;
+    background: darkorange;
+    margin-top: 1rem;
+	position: fixed;
+    left: 0;
+    top: 62px;
+	line-height: 45px;
+}
+
+.main-menu ul li{
+    
+	margin:0;
+	
+}
+
+.main-menu ul li > a{
+    
+	padding: 10px 24px;
+	display:block
+	
+}
+
+.about{
+flex-wrap:wrap;
+flex-direction: column-reverse;
+}
+
+
+}
+}
+
+
+</style>
+</head>
+<body>
+<div class="navWrapper">
+<nav class="container">
+<div class="logo">
+<h3>Game Changer</h3>
+</div>
+
+<div class="main-menu">
+<ul>
+<li ><a href="" class="active">Home</a></li>
+<li><a href="">About us</a></li>
+<li><a href="">Services</a></li>
+<li><a href="">Gallery</a></li>
+<li><a href="">Contact</a></li>
+</ul>
+</div>
+
+<div class="mobile-menu">
+<h3 style="cursor:pointer">Menu</h3>
+</div>
+
+</nav>
+</div>
+
+<div class="container" style="margin-top:30px;">
+<div class="about">
+<div class="div1">1</div>
+<div class="div2">2</div>
+<div class="div3">3</div>
+<div class="div4">4</div>
+
+</div>
+
+
+
+
+<div class="service">
+<div >1</div>
+<div >2</div>
+<div >3</div>
+<div >4</div>
+<div >1</div>
+<div >2</div>
+<div >3</div>
+<div >4</div>
+
+</div>
+
+</div>
+
+<script>
+const hamburger = document.querySelector('.mobile-menu');
+const navList = document.querySelector('.main-menu ul');
+
+hamburger.addEventListener('click', () => {
+    navList.classList.toggle('show');
+});
+
+</script>
+</body>
+<html>
